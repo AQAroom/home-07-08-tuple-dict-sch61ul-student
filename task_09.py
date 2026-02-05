@@ -1,0 +1,14 @@
+text = input()
+letter_count = {}
+
+for char in text:
+    if 'a' <= char <= 'z':
+        if char in letter_count:
+            letter_count[char] += 1
+        else:
+            letter_count[char] = 1
+
+sorted_letters = sorted(letter_count.keys())
+
+for letter in sorted_letters:
+    print(f"{letter}: {letter_count[letter]}")
