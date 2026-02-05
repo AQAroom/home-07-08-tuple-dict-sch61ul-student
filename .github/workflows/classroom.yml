@@ -1,7 +1,8 @@
 name: Autograding Tests
 on:
-  - push
-  - repository_dispatch
+  push:
+  repository_dispatch:
+    types: [classroom_submit]
 permissions:
   checks: write
   actions: read
@@ -33,12 +34,57 @@ jobs:
         id: task_03
         run: python3 tools/run_task_tests.py task_03
 
+      - name: "[TASK 04] Run tests"
+        id: task_04
+        run: python3 tools/run_task_tests.py task_04
+
+      - name: "[TASK 05] Run tests"
+        id: task_05
+        run: python3 tools/run_task_tests.py task_05
+
+      - name: "[TASK 06] Run tests"
+        id: task_06
+        run: python3 tools/run_task_tests.py task_06
+
+      - name: "[TASK 07] Run tests"
+        id: task_07
+        run: python3 tools/run_task_tests.py task_07
+
+      - name: "[TASK 08] Run tests"
+        id: task_08
+        run: python3 tools/run_task_tests.py task_08
+
+      - name: "[TASK 09] Run tests"
+        id: task_09
+        run: python3 tools/run_task_tests.py task_09
+
+      - name: "[TASK 10] Run tests"
+        id: task_10
+        run: python3 tools/run_task_tests.py task_10
+
+      - name: "[TASK 11] Run tests"
+        id: task_11
+        run: python3 tools/run_task_tests.py task_11
+
+      - name: "[TASK 12] Run tests"
+        id: task_12
+        run: python3 tools/run_task_tests.py task_12
+
       - name: ✅ Generate Final Summary
         env:
           TASK_01_RESULT: ${{ steps.task_01.outputs.result }}
           TASK_02_RESULT: ${{ steps.task_02.outputs.result }}
           TASK_03_RESULT: ${{ steps.task_03.outputs.result }}
-        run: python3 tools/generate_summary.py task_01 task_02 task_03
+          TASK_04_RESULT: ${{ steps.task_04.outputs.result }}
+          TASK_05_RESULT: ${{ steps.task_05.outputs.result }}
+          TASK_06_RESULT: ${{ steps.task_06.outputs.result }}
+          TASK_07_RESULT: ${{ steps.task_07.outputs.result }}
+          TASK_08_RESULT: ${{ steps.task_08.outputs.result }}
+          TASK_09_RESULT: ${{ steps.task_09.outputs.result }}
+          TASK_10_RESULT: ${{ steps.task_10.outputs.result }}
+          TASK_11_RESULT: ${{ steps.task_11.outputs.result }}
+          TASK_12_RESULT: ${{ steps.task_12.outputs.result }}
+        run: python3 tools/generate_summary.py task_01 task_02 task_03 task_04 task_05 task_06 task_07 task_08 task_09 task_10 task_11 task_12
 
       # Отправка в Classroom — в этом же job'е!
       - name: 📤 Report to GitHub Classroom
@@ -47,8 +93,17 @@ jobs:
           TASK_01_RESULTS: ${{ steps.task_01.outputs.result }}
           TASK_02_RESULTS: ${{ steps.task_02.outputs.result }}
           TASK_03_RESULTS: ${{ steps.task_03.outputs.result }}
+          TASK_04_RESULTS: ${{ steps.task_04.outputs.result }}
+          TASK_05_RESULTS: ${{ steps.task_05.outputs.result }}
+          TASK_06_RESULTS: ${{ steps.task_06.outputs.result }}
+          TASK_07_RESULTS: ${{ steps.task_07.outputs.result }}
+          TASK_08_RESULTS: ${{ steps.task_08.outputs.result }}
+          TASK_09_RESULTS: ${{ steps.task_09.outputs.result }}
+          TASK_10_RESULTS: ${{ steps.task_10.outputs.result }}
+          TASK_11_RESULTS: ${{ steps.task_11.outputs.result }}
+          TASK_12_RESULTS: ${{ steps.task_12.outputs.result }}
         with:
-          runners: task_01,task_02,task_03
+          runners: task_01,task_02,task_03,task_04,task_05,task_06,task_07,task_08,task_09,task_10,task_11,task_12
 
   # JOB 2: ЛИНТЕРЫ
   code-quality-analysis:

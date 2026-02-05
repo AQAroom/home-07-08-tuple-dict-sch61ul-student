@@ -2,93 +2,431 @@
   "tasks": [
     {
       "id": "task_01",
-      "name": "Задача 1: Представление",
+      "name": "Задача 1: Средняя температура",
       "file": "task_01.py",
       "max_score": 30,
       "tests": [
         {
-          "name": "Василий",
-          "input": "Василий\n35\nСамара",
-          "expected_output": "Меня зовут Василий, мне 35 лет, я живу в Самара.",
+          "name": "Утро 10, день 15, вечер 12",
+          "input": "10\n15\n12",
+          "expected_output": "12.33",
           "comparison_method": "exact",
-          "max_score": 10
+          "max_score": 7
         },
         {
-          "name": "Пётр",
-          "input": "Пётр\n30\nВладивосток",
-          "expected_output": "Меня зовут Пётр, мне 30 лет, я живу в Владивосток.",
+          "name": "Утро -5, день 0, вечер -2",
+          "input": "-5\n0\n-2",
+          "expected_output": "-2.33",
           "comparison_method": "exact",
-          "max_score": 10
+          "max_score": 8
         },
         {
-          "name": "Анастасия",
-          "input": "Анастасия\n20\nСанкт-Петербург",
-          "expected_output": "Меня зовут Анастасия, мне 20 лет, я живу в Санкт-Петербург.",
+          "name": "Утро 25, день 30, вечер 28",
+          "input": "25\n30\n28",
+          "expected_output": "27.67",
           "comparison_method": "exact",
-          "max_score": 10
+          "max_score": 8
+        },
+        {
+          "name": "Утро 0, день 0, вечер 0",
+          "input": "0\n0\n0",
+          "expected_output": "0.00",
+          "comparison_method": "exact",
+          "max_score": 7
         }
       ]
     },
     {
       "id": "task_02",
-      "name": "Задача 2: Удвоение",
+      "name": "Задача 2: Периметр прямоугольника",
       "file": "task_02.py",
       "max_score": 30,
       "tests": [
         {
-          "name": "Удвоение 9",
-          "input": "9",
-          "expected_output": "9 * 2 = 18",
+          "name": "Длина 5, ширина 3",
+          "input": "5\n3",
+          "expected_output": "16",
+          "comparison_method": "exact",
+          "max_score": 7
+        },
+        {
+          "name": "Длина 10, ширина 10",
+          "input": "10\n10",
+          "expected_output": "40",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "Длина 7, ширина 2",
+          "input": "7\n2",
+          "expected_output": "18",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "Длина 0, ширина 5",
+          "input": "0\n5",
+          "expected_output": "10",
+          "comparison_method": "exact",
+          "max_score": 7
+        }
+      ]
+    },
+    {
+      "id": "task_03",
+      "name": "Задача 3: Расстояние между точками",
+      "file": "task_03.py",
+      "max_score": 40,
+      "tests": [
+        {
+          "name": "Точки (0,0) и (3,4)",
+          "input": "0\n0\n3\n4",
+          "expected_output": "5.00",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
-          "name": "Удвоение 23",
-          "input": "23",
-          "expected_output": "23 * 2 = 46",
+          "name": "Точки (1,1) и (4,5)",
+          "input": "1\n1\n4\n5",
+          "expected_output": "5.00",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
-          "name": "Удвоение 2417",
-          "input": "2417",
-          "expected_output": "2417 * 2 = 4834",
+          "name": "Точки (-2,-3) и (1,1)",
+          "input": "-2\n-3\n1\n1",
+          "expected_output": "5.00",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "Точки (10,20) и (13,24)",
+          "input": "10\n20\n13\n24",
+          "expected_output": "5.00",
           "comparison_method": "exact",
           "max_score": 10
         }
       ]
     },
     {
-      "id": "task_03",
-      "name": "Задача 3: Конвертер секунд",
-      "file": "task_03.py",
+      "id": "task_04",
+      "name": "Задача 4: Сравнение версий",
+      "file": "task_04.py",
+      "max_score": 30,
+      "tests": [
+        {
+          "name": "1.2.3 vs 1.3.0",
+          "input": "1\n2\n3\n1\n3\n0",
+          "expected_output": "2",
+          "comparison_method": "exact",
+          "max_score": 7
+        },
+        {
+          "name": "2.0.0 vs 1.9.9",
+          "input": "2\n0\n0\n1\n9\n9",
+          "expected_output": "1",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "1.5.0 vs 1.5.0",
+          "input": "1\n5\n0\n1\n5\n0",
+          "expected_output": "0",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "0.9.9 vs 1.0.0",
+          "input": "0\n9\n9\n1\n0\n0",
+          "expected_output": "2",
+          "comparison_method": "exact",
+          "max_score": 7
+        }
+      ]
+    },
+    {
+      "id": "task_05",
+      "name": "Задача 5: Время в секундах",
+      "file": "task_05.py",
+      "max_score": 30,
+      "tests": [
+        {
+          "name": "1 час 30 минут 45 секунд",
+          "input": "1\n30\n45",
+          "expected_output": "5445",
+          "comparison_method": "exact",
+          "max_score": 7
+        },
+        {
+          "name": "0 часов 0 минут 0 секунд",
+          "input": "0\n0\n0",
+          "expected_output": "0",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "2 часа 15 минут 30 секунд",
+          "input": "2\n15\n30",
+          "expected_output": "8130",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "23 часа 59 минут 59 секунд",
+          "input": "23\n59\n59",
+          "expected_output": "86399",
+          "comparison_method": "exact",
+          "max_score": 7
+        }
+      ]
+    },
+    {
+      "id": "task_06",
+      "name": "Задача 6: Цвет в оттенках серого",
+      "file": "task_06.py",
+      "max_score": 30,
+      "tests": [
+        {
+          "name": "RGB(128, 128, 128)",
+          "input": "128\n128\n128",
+          "expected_output": "Да",
+          "comparison_method": "exact",
+          "max_score": 7
+        },
+        {
+          "name": "RGB(255, 0, 0)",
+          "input": "255\n0\n0",
+          "expected_output": "Нет",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "RGB(0, 0, 0)",
+          "input": "0\n0\n0",
+          "expected_output": "Да",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "RGB(100, 100, 99)",
+          "input": "100\n100\n99",
+          "expected_output": "Нет",
+          "comparison_method": "exact",
+          "max_score": 7
+        }
+      ]
+    },
+    {
+      "id": "task_07",
+      "name": "Задача 7: Средний балл студента",
+      "file": "task_07.py",
       "max_score": 40,
       "tests": [
         {
-          "name": "150 seconds",
-          "input": "150",
-          "expected_output": "150 секунд - это 2 минут и 30 секунд.",
+          "name": "математика 5, физика 4, химия 5",
+          "input": "математика 5\nфизика 4\nхимия 5\n",
+          "expected_output": "4.67",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
-          "name": "600 seconds",
-          "input": "600",
-          "expected_output": "600 секунд - это 10 минут и 0 секунд.",
+          "name": "все пятёрки",
+          "input": "предмет1 5\nпредмет2 5\nпредмет3 5\n",
+          "expected_output": "5.00",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
-          "name": "895 seconds",
-          "input": "895",
-          "expected_output": "895 секунд - это 14 минут и 55 секунд.",
+          "name": "разные оценки",
+          "input": "а 3\nб 4\nв 5\ng 2\n",
+          "expected_output": "3.50",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
-          "name": "3333 seconds",
-          "input": "3333",
-          "expected_output": "3333 секунд - это 55 минут и 33 секунд.",
+          "name": "одна оценка",
+          "input": "единственный 4\n",
+          "expected_output": "4.00",
+          "comparison_method": "exact",
+          "max_score": 10
+        }
+      ]
+    },
+    {
+      "id": "task_08",
+      "name": "Задача 8: Самый дорогой товар",
+      "file": "task_08.py",
+      "max_score": 30,
+      "tests": [
+        {
+          "name": "яблоко 50, банан 30, апельсин 70",
+          "input": "яблоко 50\nбанан 30\nапельсин 70\n",
+          "expected_output": "апельсин",
+          "comparison_method": "exact",
+          "max_score": 7
+        },
+        {
+          "name": "все одинаковые цены",
+          "input": "товар1 100\ntовар2 100\ntовар3 100\n",
+          "expected_output": "товар1",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "два товара",
+          "input": "дешёвый 10\nдорогой 999\n",
+          "expected_output": "дорогой",
+          "comparison_method": "exact",
+          "max_score": 8
+        },
+        {
+          "name": "цена 0",
+          "input": "бесплатно 0\nплатно 1000000\n",
+          "expected_output": "платно",
+          "comparison_method": "exact",
+          "max_score": 7
+        }
+      ]
+    },
+    {
+      "id": "task_09",
+      "name": "Задача 9: Подсчёт букв",
+      "file": "task_09.py",
+      "max_score": 40,
+      "tests": [
+        {
+          "name": "hello",
+          "input": "hello",
+          "expected_output": "e: 1\nh: 1\nl: 2\no: 1",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "aabbcc",
+          "input": "aabbcc",
+          "expected_output": "a: 2\nb: 2\nc: 2",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "python",
+          "input": "python",
+          "expected_output": "h: 1\nn: 1\no: 1\np: 1\nt: 1\ny: 1",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "aaa",
+          "input": "aaa",
+          "expected_output": "a: 3",
+          "comparison_method": "exact",
+          "max_score": 10
+        }
+      ]
+    },
+    {
+      "id": "task_10",
+      "name": "Задача 10: Объединение профилей",
+      "file": "task_10.py",
+      "max_score": 40,
+      "tests": [
+        {
+          "name": "имя+город и возраст",
+          "input": "2\nимя Анна\nгород Москва\n\n1\nвозраст 25",
+          "expected_output": "город: Москва\nимя: Анна\nвозраст: 25",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "одно поле в каждом",
+          "input": "1\nключ1 значение1\n\n1\nключ2 значение2",
+          "expected_output": "ключ1: значение1\nключ2: значение2",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "общее поле",
+          "input": "2\nимя Алиса\nвозраст 30\n\n2\nимя Боб\nгород Нью-Йорк",
+          "expected_output": "имя: Боб\nвозраст: 30\nгород: Нью-Йорк",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "пустой профиль",
+          "input": "0\n\n2\na 1\nb 2",
+          "expected_output": "a: 1\nb: 2",
+          "comparison_method": "exact",
+          "max_score": 10
+        }
+      ]
+    },
+    {
+      "id": "task_11",
+      "name": "Задача 11: Проверка пароля",
+      "file": "task_11.py",
+      "max_score": 40,
+      "tests": [
+        {
+          "name": "Pass123! с требованиями",
+          "input": "Pass123!\n3\nмин_длина 8\nцифры да\nзаглавные да",
+          "expected_output": "Да",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "короткий пароль",
+          "input": "abc\n2\nмин_длина 5\nцифры нет",
+          "expected_output": "Нет",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "без цифр при требовании цифр",
+          "input": "Password\n2\nмин_длина 8\nцифры да",
+          "expected_output": "Нет",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "все требования соблюдены",
+          "input": "A1b2C3d4\n4\nмин_длина 8\nцифры да\nзаглавные да\nсимволы нет",
+          "expected_output": "Да",
+          "comparison_method": "exact",
+          "max_score": 10
+        }
+      ]
+    },
+    {
+      "id": "task_12",
+      "name": "Задача 12: Статистика посещений",
+      "file": "task_12.py",
+      "max_score": 40,
+      "tests": [
+        {
+          "name": "Москва, СПб, Москва, Казань, СПб, Москва",
+          "input": "Москва\nСПб\nМосква\nКазань\nСПб\nМосква\n",
+          "expected_output": "Казань: 1\nМосква: 3\nСПб: 2",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "один город",
+          "input": "Единственный\n",
+          "expected_output": "Единственный: 1",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "два города по разу",
+          "input": "Город1\nГород2\n",
+          "expected_output": "Город1: 1\nГород2: 1",
+          "comparison_method": "exact",
+          "max_score": 10
+        },
+        {
+          "name": "три одинаковых города",
+          "input": "ТотЖе\nТотЖе\nТотЖе\n",
+          "expected_output": "ТотЖе: 3",
           "comparison_method": "exact",
           "max_score": 10
         }
