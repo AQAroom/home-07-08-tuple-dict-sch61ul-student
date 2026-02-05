@@ -8,7 +8,10 @@ while line != "":
     grades[subject] = score
     line = input()
 
-total = sum(grades.values())
-count = len(grades)
-average = total / count
+if len(grades) > 1:
+    total = sum(grades.values())
+    count = len(grades)
+    average = total / count
+else:
+    average = score
 print(f"{average:.2f}")

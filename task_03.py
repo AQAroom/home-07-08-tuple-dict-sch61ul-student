@@ -1,16 +1,9 @@
-v1_major = int(input())
-v1_minor = int(input())
-v1_patch = int(input())
-v2_major = int(input())
-v2_minor = int(input())
-v2_patch = int(input())
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
 
-version1 = (v1_major, v1_minor, v1_patch)
-version2 = (v2_major, v2_minor, v2_patch)
-
-if version1 > version2:
-    print(1)
-elif version2 > version1:
-    print(2)
-else:
-    print(0)
+point1 = (x1, y1)
+point2 = (x2, y2)
+distance = ((point2[0] - point1[0]) ** 2 + (point2[1] - point1[1]) ** 2) ** 0.5
+print(f"{distance:.2f}")
