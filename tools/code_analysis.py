@@ -3,7 +3,7 @@ import subprocess
 import os
 import sys
 
-task_files = ['task_01.py', 'task_02.py', 'task_03.py', 'task_04.py', 'task_05.py']
+task_files = ['task_01.py', 'task_02.py', 'task_03.py', 'task_04.py', 'task_05.py', 'task_06.py', 'task_07.py', 'task_08.py', 'task_09.py', 'task_10.py', 'task_11.py', 'task_12.py']
 
 
 def analyze_task_file(filename):
