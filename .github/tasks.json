@@ -224,28 +224,28 @@
       "tests": [
         {
           "name": "математика 5, физика 4, химия 5",
-          "input": "математика 5\nфизика 4\nхимия 5\n",
+          "input": "математика 5\nфизика 4\nхимия 5\n\n",
           "expected_output": "4.67",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
           "name": "все пятёрки",
-          "input": "предмет1 5\nпредмет2 5\nпредмет3 5\n",
+          "input": "предмет1 5\nпредмет2 5\nпредмет3 5\n\n",
           "expected_output": "5.00",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
           "name": "разные оценки",
-          "input": "а 3\nб 4\nв 5\ng 2\n",
+          "input": "а 3\nб 4\nв 5\ng 2\n\n",
           "expected_output": "3.50",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
           "name": "одна оценка",
-          "input": "единственный 4\n",
+          "input": "единственный 4\n\n",
           "expected_output": "4.00",
           "comparison_method": "exact",
           "max_score": 10
@@ -260,28 +260,28 @@
       "tests": [
         {
           "name": "яблоко 50, банан 30, апельсин 70",
-          "input": "яблоко 50\nбанан 30\nапельсин 70\n",
+          "input": "яблоко 50\nбанан 30\nапельсин 70\n\n",
           "expected_output": "апельсин",
           "comparison_method": "exact",
           "max_score": 7
         },
         {
           "name": "все одинаковые цены",
-          "input": "товар1 100\ntовар2 100\ntовар3 100\n",
+          "input": "товар1 100\ntовар2 100\ntовар3 100\n\n",
           "expected_output": "товар1",
           "comparison_method": "exact",
           "max_score": 8
         },
         {
           "name": "два товара",
-          "input": "дешёвый 10\nдорогой 999\n",
+          "input": "дешёвый 10\nдорогой 999\n\n",
           "expected_output": "дорогой",
           "comparison_method": "exact",
           "max_score": 8
         },
         {
           "name": "цена 0",
-          "input": "бесплатно 0\nплатно 1000000\n",
+          "input": "бесплатно 0\nплатно 1000000\n\n",
           "expected_output": "платно",
           "comparison_method": "exact",
           "max_score": 7
@@ -404,28 +404,28 @@
       "tests": [
         {
           "name": "Москва, СПб, Москва, Казань, СПб, Москва",
-          "input": "Москва\nСПб\nМосква\nКазань\nСПб\nМосква\n",
+          "input": "Москва\nСПб\nМосква\nКазань\nСПб\nМосква\n\n",
           "expected_output": "Казань: 1\nМосква: 3\nСПб: 2",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
           "name": "один город",
-          "input": "Единственный\n",
+          "input": "Единственный\n\n",
           "expected_output": "Единственный: 1",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
           "name": "два города по разу",
-          "input": "Город1\nГород2\n",
+          "input": "Город1\nГород2\n\n",
           "expected_output": "Город1: 1\nГород2: 1",
           "comparison_method": "exact",
           "max_score": 10
         },
         {
           "name": "три одинаковых города",
-          "input": "ТотЖе\nТотЖе\nТотЖе\n",
+          "input": "ТотЖе\nТотЖе\nТотЖе\n\n",
           "expected_output": "ТотЖе: 3",
           "comparison_method": "exact",
           "max_score": 10
